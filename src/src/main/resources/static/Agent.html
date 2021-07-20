@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<link rel="stylesheet" href="/css/agent.css">
+<script src="js/defender.js"></script>
+</head>
+<body >
+	  <h1>Agent Details</h1>
+   <div class="info"><a href="" target="_blank"><p> Guard <i class="fa fa-heart"></i> Yourself & Your's </p></a></div>
+  
+  <form  ng-app="myApp"  ng-controller="MyCtrl2 as m">
+	    <h1 align="center" ng-model="m.userName">Hi {{userName}} let's Rock together</h1>
+	    
+    <div class="contentform">
+    	<div id="sendmessage"> Your message has been sent successfully. Thank you. </div>
+
+
+    	<div class="leftcontact">
+			      <div class="form-group">
+			        <p>NAME<span>*</span></p>
+			        <span class="icon-case"><i class="fa fa-male"></i></span>
+				        <input type="text" readonly ng-model="userName" data-rule="required"/>
+                
+       </div> 
+
+            <div class="form-group">
+            <p>AGENT CODE <span>*</span></p>
+            <span class="icon-case"><i class="fa fa-user"></i></span>
+				<input type="text" name="prenom" readonly ng-model="agentCode" id="prenom" data-rule="required" data-msg="V�rifiez votre saisie sur les champs : Le champ 'Pr�nom' doit �tre renseign�."/>
+                <div class="validation"></div>
+			</div>
+
+			<div class="form-group">
+			<p>EMAIL <span>*</span></p>	
+			<span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+                <input type="email" name="email" readonly ng-model=userEmail id="email" data-rule="email" data-msg="V�rifiez votre saisie sur les champs : Le champ 'E-mail' est obligatoire."/>
+                <div class="validation"></div>
+			</div>	
+
+			<div class="form-group">
+			<p>AGENT NAME <span>*</span></p>
+			<span class="icon-case"><i class="fa fa-home"></i></span>
+				<input type="text" name="society" readonly ng-model=agentName id="society" data-rule="required" data-msg="V�rifiez votre saisie sur les champs : Le champ 'Soci�t�' doit �tre renseign�."/>
+                <div class="validation"></div>
+			</div>
+
+			<div class="form-group">
+			<p>PAN NO <span>*</span></p>
+			<span class="icon-case"><i class="fa fa-location-arrow"></i></span>
+				<input type="text" name="adresse" readonly ng-model=icNo id="adresse" data-rule="required" data-msg="V�rifiez votre saisie sur les champs : Le champ 'Adresse' doit �tre renseign�."/>
+                <div class="validation"></div>
+			</div>
+
+			<div class="form-group">
+			<p>POSTCODE <span>*</span></p>
+			<span class="icon-case"><i class="fa fa-map-marker"></i></span>
+				<input type="text" name="postal" readonly ng-model=postCode id="postal" data-rule="required" data-msg="V�rifiez votre saisie sur les champs : Le champ 'Code postal' doit �tre renseign�."/>
+                <div class="validation"></div>
+			</div>	
+
+
+
+	</div>
+
+	<div class="rightcontact">	
+
+			<div class="form-group">
+			<p>AGE <span>*</span></p>
+			<span class="icon-case"><i class="fa fa-building-o"></i></span>
+				<input type="text" name="ville" readonly ng-model=age id="ville" data-rule="required" data-msg="V�rifiez votre saisie sur les champs : Le champ 'Ville' doit �tre renseign�."/>
+                <div class="validation"></div>
+			</div>	
+
+			<div class="form-group">
+			<p>PHONE <span>*</span></p>	
+			<span class="icon-case"><i class="fa fa-phone"></i></span>
+				<input type="text" ng-model="mobileNo" readonly name="phone" id="phone" data-rule="maxlen:10" data-msg="V�rifiez votre saisie sur les champs : Le champ 'T�l�phone' doit �tre renseign�. Minimum 10 chiffres"/>
+                <div class="validation"></div>
+			</div>
+
+			
+			<p>GENDER <span>*</span></p>
+			 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked readonly>
+			{{ gender }}
+
+			<div class="form-group">
+			<p>MARITAL STATUS <span>*</span></p>	
+			<span class="icon-case"><i class="fa fa-comment-o"></i></span>
+                <input type="text" ng-model="maritalStatus" readonly name="sujet" id="sujet" data-rule="required" data-msg="V�rifiez votre saisie sur les champs : Le champ 'Sujet' doit �tre renseign�."/>
+                <div class="validation"></div>
+			</div>
+		
+			<div class="form-group">
+			<p>ADDRESS <span>*</span></p>
+			<span class="icon-case"><i class="fa fa-comments-o"></i></span>
+                <textarea name="message" ng-model="address1" readonly rows="14" data-rule="required" data-msg="V�rifiez votre saisie sur les champs : Le champ 'Message' doit �tre renseign�."></textarea>
+                <div class="validation"></div>
+			</div>	
+	</div>
+	</div>
+<button type="submit" class="bouton-contact"></button>
+	
+</form>	
+
+  
+</body>
+</html>
+</html>
